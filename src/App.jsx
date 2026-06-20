@@ -1,7 +1,12 @@
+import Confetti from "./components/Confetti";
+import Envelope from "./components/Envelope";
+import Present from "./components/Present";
+
 function App() {
   return (
-    <div className="min-h-svh flex flex-col items-center justify-center bg-gradient-to-b from-amber-50 via-orange-50 to-amber-100 px-6 py-12">
-      <header className="relative text-center mb-8">
+    <div className="min-h-svh flex flex-col items-center justify-center bg-[#782F40] px-6 py-12">
+      <Confetti />
+      <header className="relative text-center mb-10">
         <span
           className="absolute -top-2 -left-8 text-3xl select-none"
           aria-hidden="true"
@@ -15,28 +20,33 @@ function App() {
           ❤️
         </span>
 
-        <p className="text-amber-600 font-medium tracking-widest uppercase text-sm mb-3">
-          June 2026
-        </p>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-slate-900 tracking-tight drop-shadow-sm">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight drop-shadow-sm text-[#CEB888]">
           Happy Father&apos;s Day
         </h1>
-        <p className="mt-4 text-xl text-amber-700 italic">
+        <p className="mt-4 text-xl text-[#CEB888] italic">
           To the best dad in the world
         </p>
       </header>
 
-      <main className="max-w-lg w-full bg-white/90 backdrop-blur-sm rounded-2xl border-2 border-amber-400 shadow-xl shadow-amber-200/50 p-8 text-center">
-        <p className="text-lg text-slate-700 leading-relaxed">
-          Thank you for everything you do — your love, guidance, and laughter
-          mean more than words can say.
-        </p>
-      </main>
+      <div className="flex flex-col items-center gap-16 w-full">
+        <Envelope>
+          <p className="text-lg text-slate-700 leading-relaxed text-left">
+            Thank you for everything you do — your love, guidance, and laughter
+            mean more than words can say.
+          </p>
+          <p className="text-lg text-slate-800 mt-6 text-left">With love,</p>
+          <p className="text-xl font-semibold text-left mt-1">Your family</p>
+        </Envelope>
 
-      <footer className="mt-10 text-center text-slate-800">
-        <p className="text-base">With love,</p>
-        <p className="text-xl font-semibold mt-1">Your family</p>
-      </footer>
+        <Present>
+          <p className="text-lg text-slate-700 leading-relaxed text-left">
+            Here&apos;s to all the adventures we&apos;ve shared and the many
+            more still to come. You make every day brighter.
+          </p>
+          <p className="text-lg text-slate-800 mt-6 text-left">With love,</p>
+          <p className="text-xl font-semibold text-left mt-1">Your family</p>
+        </Present>
+      </div>
     </div>
   );
 }

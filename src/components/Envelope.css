@@ -1,0 +1,125 @@
+.envelope-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  min-height: 208px;
+  transition: width 0.7s ease, min-height 0.7s ease;
+}
+
+.envelope-wrapper--expanded {
+  width: min(100%, 512px);
+  min-height: 380px;
+}
+
+.envelope-stage {
+  position: relative;
+  width: 320px;
+  height: 208px;
+  z-index: 1;
+}
+
+.envelope-hint {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  color: #b45309;
+  font-style: italic;
+}
+
+/* Container */
+.envelope {
+  position: relative;
+  width: 320px;
+  height: 208px;
+  perspective: 800px;
+  cursor: pointer;
+  overflow: visible;
+}
+
+/* Back of envelope */
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #f0d998 0%, #e8c97a 100%);
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(120, 80, 20, 0.25);
+}
+
+/* Letter */
+.envelope-letter {
+  position: absolute;
+  background: #fffef9;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  padding: 16px;
+  z-index: 20;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.envelope-letter--settled {
+  border-radius: 12px;
+  border: 2px solid #fbbf24;
+  padding: 2rem;
+  box-shadow:
+    0 10px 30px rgba(120, 80, 20, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 30;
+}
+
+/* Front pocket (two side flaps) */
+.envelope-front {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.envelope-front::before,
+.envelope-front::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 65%;
+  background: #c9983f;
+}
+
+.envelope-front::before {
+  left: 0;
+  clip-path: polygon(0 100%, 0 0, 100% 100%);
+}
+
+.envelope-front::after {
+  right: 0;
+  clip-path: polygon(100% 100%, 0 100%, 100% 0);
+}
+
+/* Top flap (triangle pointing down when closed) */
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background: #d4ad5a;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+  z-index: 30;
+}
+
+/* Optional: subtle fold line */
+.envelope-back::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 55%;
+  background: rgba(0, 0, 0, 0.06);
+  transform: translateX(-50%);
+}
