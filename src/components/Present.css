@@ -5,7 +5,9 @@
   align-items: center;
   width: 280px;
   min-height: 240px;
-  transition: width 0.7s ease, min-height 0.7s ease;
+  transition:
+    width 0.7s ease,
+    min-height 0.7s ease;
 }
 
 .present-wrapper--expanded {
@@ -23,7 +25,7 @@
 .present-hint {
   margin-top: 12px;
   font-size: 0.875rem;
-  color: #b45309;
+  color: #ceb888;
   font-style: italic;
 }
 

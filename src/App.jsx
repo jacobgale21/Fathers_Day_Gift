@@ -1,5 +1,5 @@
 import Confetti from "./components/Confetti";
-import Envelope from "./components/Envelope";
+import EnvelopeGroup from "./components/EnvelopeGroup";
 import Present from "./components/Present";
 
 function App() {
@@ -28,25 +28,18 @@ function App() {
         </p>
       </header>
 
-      <div className="flex flex-col items-center gap-16 w-full">
-        <Envelope>
-          <p className="text-lg text-slate-700 leading-relaxed text-left">
-            Thank you for everything you do — your love, guidance, and laughter
-            mean more than words can say.
-          </p>
-          <p className="text-lg text-slate-800 mt-6 text-left">With love,</p>
-          <p className="text-xl font-semibold text-left mt-1">Your family</p>
-        </Envelope>
-
-        <Present>
-          <p className="text-lg text-slate-700 leading-relaxed text-left">
-            Here&apos;s to all the adventures we&apos;ve shared and the many
-            more still to come. You make every day brighter.
-          </p>
-          <p className="text-lg text-slate-800 mt-6 text-left">With love,</p>
-          <p className="text-xl font-semibold text-left mt-1">Your family</p>
-        </Present>
-      </div>
+      <EnvelopeGroup
+        present={
+          <Present>
+            <p className="text-lg text-slate-700 leading-relaxed text-left">
+              Here&apos;s to all the adventures we&apos;ve shared and the many
+              more still to come. You make every day brighter.
+            </p>
+            <p className="text-lg text-slate-800 mt-6 text-left">With love,</p>
+            <p className="text-xl font-semibold text-left mt-1">Your family</p>
+          </Present>
+        }
+      />
     </div>
   );
 }

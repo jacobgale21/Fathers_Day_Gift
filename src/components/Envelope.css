@@ -1,3 +1,83 @@
+.envelope-wrapper--compact {
+  width: 240px;
+  min-height: 168px;
+}
+
+.envelope-stage--compact {
+  width: 240px;
+  height: 168px;
+}
+
+.envelope--compact {
+  width: 240px;
+  height: 168px;
+}
+
+.envelope-letter--compact {
+  min-height: 110px;
+}
+
+.envelope-group {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.envelope-group__below {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.present-slot {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-shrink: 0;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.envelope-letter-stage {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-shrink: 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.envelope-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 0;
+  width: 100%;
+}
+
+.envelope-row--two {
+  justify-content: space-evenly;
+  gap: 0;
+}
+
+.envelope-row-item {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+.envelope-slot {
+  display: flex;
+  justify-content: center;
+}
+
 .envelope-wrapper {
   position: relative;
   display: flex;
@@ -5,7 +85,9 @@
   align-items: center;
   width: 320px;
   min-height: 208px;
-  transition: width 0.7s ease, min-height 0.7s ease;
+  transition:
+    width 0.7s ease,
+    min-height 0.7s ease;
 }
 
 .envelope-wrapper--expanded {
@@ -23,7 +105,7 @@
 .envelope-hint {
   margin-top: 12px;
   font-size: 0.875rem;
-  color: #b45309;
+  color: #ceb888;
   font-style: italic;
 }
 
@@ -58,7 +140,17 @@
   box-sizing: border-box;
 }
 
-.envelope-letter--settled {
+.envelope-letter.envelope-letter--main {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: min(100%, 480px);
+  min-height: 0;
+  height: auto;
+  z-index: auto;
+}
+
+.envelope-letter--settled:not(.envelope-letter--main) {
   border-radius: 12px;
   border: 2px solid #fbbf24;
   padding: 2rem;
@@ -66,6 +158,38 @@
     0 10px 30px rgba(120, 80, 20, 0.15),
     0 4px 12px rgba(0, 0, 0, 0.08);
   z-index: 30;
+}
+
+.envelope-letter--main.envelope-letter--settled {
+  border-radius: 12px;
+  border: 2px solid #fbbf24;
+  padding: 1.5rem;
+  box-shadow:
+    0 10px 30px rgba(120, 80, 20, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.envelope-letter-return {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #782f40;
+  background: #ceb888;
+  border: 2px solid #b8956a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.envelope-letter-return:hover:not(:disabled) {
+  background: #dfc9a0;
+}
+
+.envelope-letter-return:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 /* Front pocket (two side flaps) */

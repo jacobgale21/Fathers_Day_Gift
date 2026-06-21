@@ -129,9 +129,7 @@ export default function Present({ children }) {
         </motion.div>
       )}
 
-      {state === states.CLOSED && (
-        <p className="present-hint ">Click to open</p>
-      )}
+      {state === states.CLOSED && <p className="present-hint">Click to open</p>}
     </div>
   );
 }
