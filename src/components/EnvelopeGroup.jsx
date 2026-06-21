@@ -8,12 +8,23 @@ const ENVELOPES = [
     id: 0,
     content: (
       <>
-        <p className="text-lg text-slate-700 leading-relaxed text-left">
-          Thank you for everything you do — your love, guidance, and laughter
-          mean more than words can say.
+        <p className="text-lg text-slate-800 leading-relaxed text-left font-bold mb-4">
+          Dear Dad,
         </p>
-        <p className="text-lg text-slate-800 mt-6 text-left">With love,</p>
-        <p className="text-xl font-semibold text-left mt-1">Your family</p>
+        <p className="text-lg text-slate-700 leading-relaxed text-left">
+          Happy Father&apos;s Day! Thank you for being my rock and always
+          knowing the right things to say. Thank you for always being in my
+          corner whenever I need it most.
+        </p>
+        <p className="text-lg text-slate-700 leading-relaxed text-left mt-4">
+          I am forever grateful for the life that you have provided for us and
+          support that you have gave us. I could not ask for a better dad and I
+          hope you have the best day.
+        </p>
+        <p className="text-lg text-slate-800 mt-8 text-left">
+          Love you always,
+        </p>
+        <p className="text-xl font-semibold text-left mt-1">Mackenzie</p>
       </>
     ),
   },
@@ -21,12 +32,34 @@ const ENVELOPES = [
     id: 1,
     content: (
       <>
-        <p className="text-lg text-slate-700 leading-relaxed text-left">
-          You&apos;ve taught us strength, kindness, and how to laugh through
-          every challenge. We&apos;re grateful for you every day.
+        <p className="text-lg text-slate-800 leading-relaxed text-left font-bold mb-4">
+          Dear Dad,
         </p>
-        <p className="text-lg text-slate-800 mt-6 text-left">With love,</p>
-        <p className="text-xl font-semibold text-left mt-1">Your family</p>
+        <p className="text-lg text-slate-700 leading-relaxed text-left">
+          Thank you for being the best dad. Thank you for always being there for
+          me when I need it most, especially these past few months. I do not
+          know where I would be without your support.
+        </p>
+        <p className="text-lg text-slate-700 leading-relaxed text-left mt-4">
+          You have set an amazing example for Mackenzie, Taylor, and me that we
+          all strive to follow each day. Thank you for working the long days to
+          support us and give us the life that we dream of having.
+        </p>
+        <p className="text-lg text-slate-700 leading-relaxed text-left mt-4">
+          Thank you for being patient and understanding throughout these past
+          couple of months, even when I have lashed out at you, even though
+          you&apos;re always trying to support. I have enjoyed our long
+          conversations throughout the last year, especially when it seemed like
+          I had no one else to talk to.
+        </p>
+        <p className="text-lg text-slate-700 leading-relaxed text-left mt-4">
+          I want to give you the same support that you give me, and I hope that
+          we can both continue to grow to be better men and achieve all our
+          goals. Thank you again for everything that you have ever done for me.
+          You have been the best dad that I could ask for.
+        </p>
+        <p className="text-lg text-slate-800 mt-8 text-left">From,</p>
+        <p className="text-xl font-semibold text-left mt-1">Jacob</p>
       </>
     ),
   },
@@ -34,12 +67,18 @@ const ENVELOPES = [
     id: 2,
     content: (
       <>
-        <p className="text-lg text-slate-700 leading-relaxed text-left">
-          Here&apos;s to the memories we&apos;ve made and the adventures still
-          ahead. No one does it better than you, Dad.
+        <p className="text-lg text-slate-800 leading-relaxed text-left font-bold mb-4">
+          Dear Dad,
         </p>
-        <p className="text-lg text-slate-800 mt-6 text-left">With love,</p>
-        <p className="text-xl font-semibold text-left mt-1">Your family</p>
+        <p className="text-lg text-slate-700 leading-relaxed text-left">
+          Thank you for being my #1 supporter. I want to thank you 1 million
+          times for always pushing me to be the best version of myself.
+        </p>
+        <p className="text-lg text-slate-700 leading-relaxed text-left mt-4">
+          I love you so much! Happy Father&apos;s Day 🐐🩷
+        </p>
+        <p className="text-lg text-slate-800 mt-8 text-left">From,</p>
+        <p className="text-xl font-semibold text-left mt-1">Taylor</p>
       </>
     ),
   },
